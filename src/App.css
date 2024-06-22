@@ -1,38 +1,75 @@
-.App {
-  text-align: center;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+    scroll-behavior: smooth;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+    
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.posts_list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
 }
 
-.App-link {
-  color: #61dafb;
+.post {
+    border: 1px solid grey;
+    margin-bottom: 15px;
+    padding: 15px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.post:hover {
+    background-color: rgba(100, 100, 100, 0.1);
+}
+
+button {
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: aliceblue;
+    color: black;
+    transition: background-color 0.3s ease;
+}
+
+.remove {
+    background-color: rgba(255, 0, 0, 0.2);
+    margin-left: 20px;
+}
+
+.remove:hover {
+    background-color: rgba(255, 0, 0, 0.6);
+}
+
+.add {
+    background-color: rgba(75, 184, 234, 0.2);
+    width: 50%;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+}
+
+.add:hover {
+    background-color: rgba(75, 184, 234, 0.6);
+}
+
+.update {
+    background-color: rgba(0, 255, 150, 0.2);
+}
+
+.update:hover {
+    background-color: rgba(0, 255, 150, 0.6);
 }

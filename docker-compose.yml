@@ -1,0 +1,15 @@
+version: '3.5'
+
+services:
+  react:
+    build:
+      dockerfile: ./Dockerfile.frontend
+    ports:
+      - "3000:3000"
+
+  database:
+    build:
+      dockerfile: ./Dockerfile.database
+    restart: always
+    ports:
+      - "5000:5000"
