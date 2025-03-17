@@ -1,7 +1,9 @@
 import React from 'react'
-import { postAPI } from '../services/PostService';
-import PostItem from './PostItem';
-import { IPost } from '../models/IPost';
+import { postAPI } from '../../services/PostService';
+import PostItem from '../PostItem/post-item';
+import { IPost } from '../../models/IPost';
+
+import s from './post-container.module.css';
 
 const PostContainer = () => {
     const { data: posts, error, isLoading } = postAPI.useFetchAllPostsQuery(100)
@@ -25,7 +27,7 @@ const PostContainer = () => {
     }
 
     return (
-        <div className="posts_list">
+        <div className={s.posts_list}>
             {isLoading && <h1>Loading...</h1>}
             {error && <h1>Ошибка!</h1>}
             {posts && posts.map(post => <PostItem
@@ -34,7 +36,7 @@ const PostContainer = () => {
                 remove={handleRemove}
                 update={handleUpdate}
             />)}
-            <button onClick={handleCreate} className="add">Add post</button>
+            <button onClick={handleCreate} className={s.add}>Add post</button>
         </div>
     )
 }

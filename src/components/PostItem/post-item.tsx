@@ -1,5 +1,7 @@
 import React, { FC } from 'react'
-import { IPost } from '../models/IPost';
+import { IPost } from '../../models/IPost';
+
+import s from './post-item.module.css';
 
 interface PostItemProps {
     post: IPost;
@@ -20,11 +22,11 @@ const PostItem: FC<PostItemProps> = ({ post, update, remove }) => {
     }
 
     return (
-        <div className="post">
+        <div className={s.post}>
             {post.id}) {post.title}
             <div>
-                <button className="update" onClick={handleUpdate}>Change</button>
-                <button className="remove" onClick={handleRemove}>Delete</button>
+                <button className={s.update} onClick={handleUpdate}>Change</button>
+                <button className={s.remove} onClick={handleRemove}>Delete</button>
             </div>
         </div>
     )

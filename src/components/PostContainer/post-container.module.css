@@ -1,0 +1,18 @@
+.posts_list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.add {
+    background-color: rgba(75, 184, 234, 0.2);
+    width: 50%;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+}
+
+.add:hover {
+    background-color: rgba(75, 184, 234, 0.6);
+}
